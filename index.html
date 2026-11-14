@@ -3,24 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prénom Nom – Portfolio</title>
+  <meta name="description" content="Portfolio de Prénom Nom, étudiant en Licence Big Data à Tunis : analyse de données, Python, Excel, Power BI.">
+  <title>Prénom Nom – Analyse de données</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 700px;
-           margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-    a { color: #0E6B70; }
+    :root {
+      --texte: #14232B; --discret: #4B6370; --fond: #F3F6F8;
+      --carte: #FFFFFF; --accent: #0E6B70; --ligne: #D5DEE3;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fond); color: var(--texte);
+           font-family: system-ui, sans-serif; line-height: 1.6; }
+    .conteneur { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 56px 0 24px; }
+    h1 { font-size: 2.2rem; margin: 0 0 8px; line-height: 1.15; }
+    h2 { font-size: 1.4rem; margin: 48px 0 16px; padding-top: 24px;
+         border-top: 1px solid var(--ligne); }
+    .sous-titre { color: var(--discret); font-size: 1.1rem; margin: 0; }
+    a { color: var(--accent); }
+    .projet { background: var(--carte); border: 1px solid var(--ligne);
+              border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .projet h3 { margin: 0 0 8px; }
+    .outils { color: var(--discret); font-size: .95rem; }
+    .liens a { margin-right: 16px; font-weight: 600; }
+    footer { padding: 32px 0 56px; color: var(--discret); font-size: .9rem; }
+    @media (max-width: 600px) { h1 { font-size: 1.8rem; } }
   </style>
 </head>
 <body>
-  <h1>Prénom Nom</h1>
-  <p>Étudiant en Licence Big Data, Tunis.</p>
+  <div class="conteneur">
+    <header>
+      <h1>Prénom Nom</h1>
+      <p class="sous-titre">Étudiant en Licence 3 Big Data à Tunis. Je transforme des données brutes en conclusions vérifiables.</p>
+    </header>
 
-  <h2>Projets</h2>
-  <ul>
-    <li><strong>Marché mobile tunisien</strong> : le parc recule de 8,5 %
-        alors que le chiffre d'affaires progresse de 8,6 %.</li>
-  </ul>
+    <main>
+      <h2>Projets</h2>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:ton@email.com">ton@email.com</a></p>
+      <article class="projet">
+        <h3>Marché mobile tunisien, 2023–2025</h3>
+        <p><strong>Résultat :</strong> le parc mobile recule de 8,5 % alors que le chiffre d'affaires du secteur progresse de 8,6 %.</p>
+        <p><strong>Méthode :</strong> extraction de 9 trimestres de données publiques de l'INT, nettoyage, contrôles de cohérence, analyse.</p>
+        <p class="outils">Python, pandas, matplotlib</p>
+        <p class="liens"><a href="rapport-telecoms.pdf">Rapport (PDF)</a></p>
+      </article>
+
+      <article class="projet">
+        <h3>Menaces et attaques informatiques</h3>
+        <p><strong>Résultat :</strong> rapport de 17 pages sur les malwares, le sniffing, le spoofing et le phishing, avec cas réels et sources.</p>
+        <p class="outils">Recherche documentaire, rédaction technique</p>
+        <p class="liens"><a href="rapport-securite.pdf">Rapport (PDF)</a></p>
+      </article>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:ton@email.com">ton@email.com</a><br>
+         <a href="https://www.linkedin.com/in/ton-profil">LinkedIn</a></p>
+    </main>
+
+    <footer>Prénom Nom, Tunis.</footer>
+  </div>
 </body>
 </html>
